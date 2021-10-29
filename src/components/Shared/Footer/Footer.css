@@ -1,0 +1,9 @@
+.footer {
+    height: 70px;
+    width: 100%;
+    background-color: #354f52;
+  }
+  .footer h6 {
+    color: #dee2e6;
+    padding-top: 25px;
+  }
