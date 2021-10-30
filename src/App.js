@@ -6,13 +6,17 @@ import Home from './components/Home/Home/Home';
 import OrderPlace from './components/Home/OrderPlace/OrderPlace';
 import Services from './components/Home/Services/Services';
 import Login from './components/Login/Login/Login';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import Register from './components/Login/Register/Register';
 import NotFound from './components/NotFound/NotFound';
 import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
+import AuthProvider from './contexts/AuthProvider';
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <Router>
         <Header></Header>
         <Switch>
@@ -33,13 +37,17 @@ function App() {
             <OrderPlace></OrderPlace>
           </Route>
        
-          <Route path="/addService">
+          <PrivateRoute path="/addService">
             <AddService></AddService>
-          </Route>
+          </PrivateRoute>
           
 
           <Route path="/login">
             <Login></Login>
+          </Route>
+
+          <Route path="/register">
+          <Register></Register>
           </Route>
 
           <Route path="*">
@@ -49,6 +57,7 @@ function App() {
         </Switch>
         <Footer></Footer>
       </Router>
+      </AuthProvider>
      
     </div>
   );

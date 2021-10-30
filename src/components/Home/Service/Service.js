@@ -12,8 +12,8 @@ const Service = (props) => {
           <Card.Img variant="top" className="card-img border border-primary rounded-3" src={img} />
           <Card.Body>
              <h3>{name}</h3>
-             <h5>{price}</h5>
-             <p>{description}</p>
+             <h5>${price}</h5>
+             <p>{description.slice(0, 110)}</p>
             <Link to={`/bookNow/${_id}`}>
              <Button variant="danger">Book Now</Button>
            </Link>

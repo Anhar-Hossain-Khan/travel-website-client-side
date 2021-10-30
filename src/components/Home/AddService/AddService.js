@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
+import Services from '../Services/Services';
 import './AddService.css'
 
 const AddService = () => {
@@ -25,6 +26,8 @@ const AddService = () => {
       <input {...register("img")} placeholder="Img Url" />
       <input type="submit" />
     </form>
+
+    <Services></Services>
         </div>
     );
 };
