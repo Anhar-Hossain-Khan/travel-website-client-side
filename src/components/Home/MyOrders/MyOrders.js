@@ -50,7 +50,9 @@ const MyOrders = () => {
       <th>City</th>
       <th>Date</th>
       <th>Phone</th>
+      <th>Order Status</th>
       <th>Cancel</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -62,6 +64,7 @@ const MyOrders = () => {
       <td>{myOrder.city}</td>
       <td>{myOrder.date}</td>
       <td>{myOrder.phone}</td>
+      <td>{myOrder.status}</td>
       <td> <button onClick={()=> handleDeleteUser(myOrder._id)}  className=" text-white btn btn-danger">Cancel</button> </td>
     </tr>
     
