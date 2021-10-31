@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 
 const UpdateOrder = () => {
     const [orderStatus, setOrderStatus] = useState({});

@@ -33,12 +33,12 @@ const ManageOrders = () => {
 }
     return (
             
-            <div className="container mt-5">
-                <h1>Manage All Orders: {manageAllOrders?.length}</h1>
+    <div className="container mt-5">
+    <h1>Manage All Orders: {manageAllOrders?.length}</h1>
   
-                <Row xs={1} md={1} lg={1}>
-  <Table striped bordered hover className="text-primary" responsive="sm md lg">
-  <thead>
+    <Row xs={1} md={1} lg={1}>
+    <Table striped bordered hover className="text-primary table-responsive-sm table-responsive-xl" responsive="sm md lg">
+   <thead>
     <tr>
       <th>#</th>
       <th>Name</th>
@@ -54,8 +54,7 @@ const ManageOrders = () => {
   {manageAllOrders?.map((manageAllOrder, index) => (
   <tbody>
     <tr>
-    
-
+  
       <td>{index}</td>
       <td>{manageAllOrder.name}</td>
       <td>{manageAllOrder.email}</td>
@@ -65,18 +64,11 @@ const ManageOrders = () => {
       <td>{manageAllOrder.status}</td>
       <td> <button onClick={()=> handleDeleteUser(manageAllOrder._id)} className=" text-white btn btn-danger">Delete</button> </td>
     </tr>
-    
   </tbody>
   ))}
   </Table>
   </Row>
- 
-  
         </div>
-              
-            
-           
-        
     );
 };
 

@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import About from './components/Home/About/About';
 import AddService from './components/Home/AddService/AddService';
 import Home from './components/Home/Home/Home';
 import ManageOrders from './components/Home/ManageOrders/ManageOrders';
@@ -15,7 +16,6 @@ import NotFound from './components/NotFound/NotFound';
 import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
-
 
 function App() {
   return (
@@ -36,6 +36,10 @@ function App() {
           <Route path="/services">
             <Services></Services>
           </Route>
+
+          <PrivateRoute path="/about">
+            <About></About>
+          </PrivateRoute>
 
           <PrivateRoute path="/addService">
             <AddService></AddService>

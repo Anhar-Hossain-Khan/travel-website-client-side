@@ -5,7 +5,6 @@ import bali1 from '../../../images/bali1.jpg';
 import thailand3 from '../../../images/thailand3.jpg';
 import { Carousel } from 'react-bootstrap';
 
-
 const Banner = () => {
     return (
         <div>

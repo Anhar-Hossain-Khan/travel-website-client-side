@@ -26,7 +26,7 @@ const AddService = () => {
       <input {...register("img")} placeholder="Img Url"/>
       <input type="submit" className="btn btn-primary" />
     </form>
-
+    
     <Services></Services>
         </div>
     );

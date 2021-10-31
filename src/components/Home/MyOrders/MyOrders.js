@@ -29,7 +29,6 @@ const MyOrders = () => {
         })
         } 
     }
-
     return (
         <div className="container">
         <div className="top">
@@ -40,7 +39,7 @@ const MyOrders = () => {
                 myOrders?.map((myOrder, index) => 
 
   <div className="mt-5">
-  <Table striped bordered hover className="text-primary" responsive="sm md lg">
+  <Table striped bordered hover className="text-primary table-responsive-sm table-responsive-xl" responsive="sm md lg">
   <thead>
     <tr>
       <th>#</th>
