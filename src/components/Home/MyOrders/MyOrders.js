@@ -43,20 +43,24 @@ const MyOrders = () => {
   <Table striped bordered hover className="text-primary" responsive="sm md lg">
   <thead>
     <tr>
+    
       <th>Name</th>
       <th>Email</th>
       <th>Address</th>
       <th>City</th>
+      <th>Date</th>
       <th>Phone</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
+    
       <td>{myOrder.name}</td>
       <td>{myOrder.email}</td>
       <td>{myOrder.address}</td>
       <td>{myOrder.city}</td>
+      <td>{myOrder.date}</td>
       <td>{myOrder.phone}</td>
       <td> <button onClick={()=> handleDeleteUser(myOrder._id)}  className=" text-white btn btn-success">Cancel</button> </td>
     </tr>

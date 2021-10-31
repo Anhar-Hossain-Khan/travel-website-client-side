@@ -1,11 +1,19 @@
-.add-service form{
+.add-package form{
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 }
 
-.add-service form input, textarea{
+.add-package form input, textarea{
+    margin-top: 30px;
+    padding: 4px;
+    border: 1px solid gray;
+    border-radius: 5px;
     width: 40%;
     margin-bottom: 10px;
+}
+
+.add-package h1{
+    color: #04a04af6;
 }

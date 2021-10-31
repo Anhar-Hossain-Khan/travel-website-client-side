@@ -15,9 +15,9 @@ const Services = () => {
     return (
         <div className="container">
         <div className="top">
-        <h2>Our <span>Services</span></h2>
+        <h2>Our Popular <span>Packages</span></h2>
         </div>
-        <input className="service" type="text" placeholder="Search your Favourite Places" />
+        <input className="package" type="text" placeholder="Search your Favourite Packages" />
         <Row xs={1} md={2} lg={3} className="g-4">
             {
                 services?.map(service => <Service key={service._id} service={service}></Service>)
