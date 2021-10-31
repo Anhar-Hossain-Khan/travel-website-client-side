@@ -36,14 +36,14 @@ const MyOrders = () => {
         <h2>My <span>Orders</span></h2>
         </div>
         <Row xs={1} md={1} lg={1} className="g-4">
-           <ol>
            {
-                myOrders?.map(myOrder => <li key={myOrder._id}>
+                myOrders?.map((myOrder, index) => 
+
   <div className="mt-5">
   <Table striped bordered hover className="text-primary" responsive="sm md lg">
   <thead>
     <tr>
-    
+      <th>#</th>
       <th>Name</th>
       <th>Email</th>
       <th>Address</th>
@@ -55,22 +55,23 @@ const MyOrders = () => {
   </thead>
   <tbody>
     <tr>
-    
+       <td>{index}</td>
       <td>{myOrder.name}</td>
       <td>{myOrder.email}</td>
       <td>{myOrder.address}</td>
       <td>{myOrder.city}</td>
       <td>{myOrder.date}</td>
       <td>{myOrder.phone}</td>
-      <td> <button onClick={()=> handleDeleteUser(myOrder._id)}  className=" text-white btn btn-success">Cancel</button> </td>
+      <td> <button onClick={()=> handleDeleteUser(myOrder._id)}  className=" text-white btn btn-danger">Cancel</button> </td>
     </tr>
     
   </tbody>
   </Table>
         </div>
-                </li>)
+               
+                )
             }
-           </ol>
+           
         </Row>
      </div>
 
