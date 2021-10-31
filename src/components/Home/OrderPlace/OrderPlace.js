@@ -8,8 +8,10 @@ const OrderPlace = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const {user} = useAuth();
     const onSubmit = data => {
-        console.log(data);
-        axios.post('https://desolate-spire-46689.herokuapp.com/orderplace', data)
+       let placeOrder = data;
+       console.log(placeOrder);
+       placeOrder.status = "pending";
+        axios.post('https://desolate-spire-46689.herokuapp.com/orderplace', placeOrder)
         .then(res => {
             if(res.data.insertedId){
                 alert('Information Added Successfully');
@@ -29,6 +31,7 @@ const OrderPlace = () => {
       <input {...register("city")} placeholder="City" />
       <input type="date"{...register("date", {valueAsDate: true,})}/>
       <input {...register("phone")} placeholder="Phone" />
+      <input {...register("status")} defaultValue="pending" readOnly/>
       <input type="submit" className="btn btn-primary" />
     </form>
         </div>
