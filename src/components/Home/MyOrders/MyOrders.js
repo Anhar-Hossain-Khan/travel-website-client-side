@@ -50,7 +50,7 @@ const MyOrders = () => {
       <th>City</th>
       <th>Date</th>
       <th>Phone</th>
-      <th></th>
+      <th>Cancel</th>
     </tr>
   </thead>
   <tbody>

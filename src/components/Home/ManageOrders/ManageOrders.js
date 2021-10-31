@@ -42,8 +42,9 @@ const ManageOrders = () => {
       <th>Name</th>
       <th>Email</th>
       <th>Address</th>
-      <th>Status</th>
+      <th>Date</th>
       <th>Approved</th>
+      <th>Status</th>
       <th>Delete</th>
      
     </tr>
@@ -58,8 +59,8 @@ const ManageOrders = () => {
       <td>{manageAllOrder.email}</td>
       <td>{manageAllOrder.address}</td>
       <td>{manageAllOrder.date}</td>
-      <td>Pending</td>
       <td> <button  className=" text-white btn btn-success">Approve</button> </td>
+      <td>Pending</td>
       <td> <button onClick={()=> handleDeleteUser(manageAllOrder._id)} className=" text-white btn btn-danger">Delete</button> </td>
     </tr>
     
