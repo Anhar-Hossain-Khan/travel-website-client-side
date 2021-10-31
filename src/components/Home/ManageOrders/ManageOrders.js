@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { Row, Table } from 'react-bootstrap';
 
 const ManageOrders = () => {
     const [manageAllOrders, setManageAllOrders] = useState([]);
@@ -34,7 +34,7 @@ const ManageOrders = () => {
             <div className="container mt-5">
                 <h1>Manage All Orders: {manageAllOrders?.length}</h1>
   
-  <li>
+                <Row xs={1} md={1} lg={1}>
   <Table striped bordered hover className="text-primary" responsive="sm md lg">
   <thead>
     <tr>
@@ -43,7 +43,7 @@ const ManageOrders = () => {
       <th>Email</th>
       <th>Address</th>
       <th>Date</th>
-      <th>Approved</th>
+      <th>Approve</th>
       <th>Status</th>
       <th>Delete</th>
      
@@ -67,7 +67,8 @@ const ManageOrders = () => {
   </tbody>
   ))}
   </Table>
-  </li>
+  </Row>
+ 
   
         </div>
               
