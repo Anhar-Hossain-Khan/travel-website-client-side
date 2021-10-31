@@ -7,6 +7,7 @@ import ManageOrders from './components/Home/ManageOrders/ManageOrders';
 import MyOrders from './components/Home/MyOrders/MyOrders';
 import OrderPlace from './components/Home/OrderPlace/OrderPlace';
 import Services from './components/Home/Services/Services';
+import UpdateOrder from './components/Home/UpdateOrder/UpdateOrder';
 import Login from './components/Login/Login/Login';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import Register from './components/Login/Register/Register';
@@ -48,13 +49,14 @@ function App() {
             <MyOrders></MyOrders>
           </PrivateRoute>
 
+          <PrivateRoute path="/orderplace/update/:id">
+            <UpdateOrder></UpdateOrder>
+          </PrivateRoute>
+
           <PrivateRoute path="/manageOrders">
             <ManageOrders></ManageOrders>
           </PrivateRoute>
           
-
-          
-
           <Route path="/login">
             <Login></Login>
           </Route>

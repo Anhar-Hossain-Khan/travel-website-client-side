@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Row, Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const ManageOrders = () => {
     const [manageAllOrders, setManageAllOrders] = useState([]);
@@ -7,7 +8,8 @@ const ManageOrders = () => {
   useEffect(() => {
     fetch('https://desolate-spire-46689.herokuapp.com/orderplace')
       .then((res) => res.json())
-      .then((data) => setManageAllOrders(data));
+      .then((data) => setManageAllOrders(data))
+      
   }, []);
 
   // Delete an user
@@ -59,8 +61,8 @@ const ManageOrders = () => {
       <td>{manageAllOrder.email}</td>
       <td>{manageAllOrder.address}</td>
       <td>{manageAllOrder.date}</td>
-      <td> <button  className=" text-white btn btn-success">Update</button> </td>
-      <td>Pending</td>
+      <td> <Link to={`/orderplace/update/${manageAllOrder._id}`}> <button  className=" text-white btn btn-success">Update</button> </Link> </td>
+      <td>{manageAllOrder.status}</td>
       <td> <button onClick={()=> handleDeleteUser(manageAllOrder._id)} className=" text-white btn btn-danger">Delete</button> </td>
     </tr>
     
