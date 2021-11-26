@@ -2,7 +2,7 @@
 
 ### Live Website Link: https://travel-website-4305c.web.app/
 
-### Github Client Side Link: https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-Anhar-Hossain-Khan
+### Github Client Side Link: https://github.com/Anhar-Hossain-Khan/travel-website-client-side
 
 ### Github Server Side Link: https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-Anhar-Hossain-Khan
 
